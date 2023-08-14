@@ -1,0 +1,87 @@
+form {
+  overflow: hidden;
+
+  position: absolute;
+  left: 50%;
+  top: calc(60px + 3em);
+  transform: translate(-50%, 0%);
+  padding: 3rem;
+  padding-top: 1rem;
+  z-index: 10;
+
+  width: 85%;
+  max-width: 500px;
+  color: #a2ffe8;
+
+  background-color: #314653;
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+}
+form .loader {
+  background: #314653;
+}
+form .loader .spinner {
+  border-top-color: #314653;
+  border-bottom-color: #314653;
+}
+form input[type="submit"],
+a.login-flow {
+  margin-block: 1em;
+}
+
+form a#register-link,
+form a#login-link {
+  font-size: 0.8em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: white !important;
+}
+
+#background-design {
+  position: fixed;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+#background-design svg {
+  fill: var(--accent-clr);
+}
+#background-design svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#password-matching {
+  width: 100%;
+  text-align: center;
+  color: #2fff63;
+}
+#password-matching.error {
+  color: rgb(255, 104, 58);
+}
+hr.or::after {
+  background-color: #314653 !important;
+  color: white;
+}
+a.login-flow {
+  display: block;
+  text-decoration: none;
+  border: 2px solid var(--accent-clr);
+  color: var(--accent-clr);
+  background-color: transparent;
+  transition: 0.5s;
+}
+a.login-flow:hover {
+  background-color: var(--accent-clr);
+  color: var(--theme-clr);
+}
+
+form .success .text {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+}

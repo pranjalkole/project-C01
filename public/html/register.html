@@ -1,0 +1,87 @@
+<!-- vim: set expandtab:
+ vim: noai:ts=4:
+ vim: noai:tabstop=4:
+ vim: noai:shiftwidth=4:
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="theme-color" content="#363c40" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Register</title>
+    <link rel="stylesheet" href="public/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="public/css/login.css" />
+  </head>
+  <body>
+    <header class="flexbox">
+      <a href="/" id="home-link"
+        ><i class="fa-solid fa-house" aria-hidden="true"></i
+      ></a>
+      <h1>Logo</h1>
+    </header>
+
+    <form method="POST" id="register" class="flexbox">
+      <div class="container flexbox">
+        <h1>Register</h1>
+        <div class="input-container">
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="input-container">
+          <label for="cnfpassword">Confirm Password</label>
+          <input type="password" name="cnfpassword" id="cnfpassword" required />
+          <p id="password-matching"></p>
+        </div>
+        <input type="submit" value="Register" />
+        <hr class="or" />
+        <a href="/login" class="login-flow">Login</a>
+      </div>
+
+      <!-- spinner for loading state -->
+      <div class="loader" style="display: none">
+        <div class="spinner"></div>
+      </div>
+      <!-- below to be shown once verification email is sent successfully -->
+      <div class="success" style="display: none">
+        <div class="illustration">
+          <!-- adding an animated free illustration -->
+          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+          <lord-icon
+            src="https://cdn.lordicon.com/iepbfivp.json"
+            trigger="loop"
+            delay="500"
+            colors="primary:#ffffff,secondary:#00ffbf,tertiary:#ebe6ef"
+            style="width: 250px; height: 250px"
+          >
+          </lord-icon>
+        </div>
+        <div class="text">
+          Email Verification Link Sent Successfully. Please Check Your Email.
+        </div>
+      </div>
+    </form>
+
+    <div id="background-design">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill-opacity="1"
+          d="M0,192L60,192C120,192,240,192,360,208C480,224,600,256,720,234.7C840,213,960,139,1080,90.7C1200,43,1320,21,1380,10.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+    <script src="/public/js/firebase.js"></script>
+    <script src="/public/js/register.js"></script>
+  </body>
+</html>
